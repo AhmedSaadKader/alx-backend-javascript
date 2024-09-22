@@ -23,4 +23,9 @@ describe('it performs calculations on the rounded numbers', () => {
       assert.equal(calculateNumber('DIVIDE', 3, 1), 3);
     });
   });
+  describe('returns NAN if type is incorrect', () => {
+    it('should return 3', () => {
+      assert.equal(calculateNumber('error', 3, 1), undefined);
+    });
+  });
 });
