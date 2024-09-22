@@ -1,13 +1,13 @@
-const assert = chai.assert;
+const { expect } = require('chai');
 const calculateNumber = require('./1-calcul');
 
 describe('it performs calculations on the rounded numbers', () => {
   describe('returns the sum if type is sum', () => {
     it('should return 2', () => {
-      assert.equal(calculateNumber('SUM', 1, 1), 2);
+      expect(calculateNumber('SUM', 1, 1)).to.equal(2);
     });
     it('handles floating points', () => {
-      assert.equal(calculateNumber('SUM', 1.0, 2.0), 3);
+      expect(calculateNumber('SUM', 1.0, 2.0)).to.equal(3);
     });
     it('correctly rounds number', () => {
       assert.equal(calculateNumber('SUM', 1.2, 2.4), 3);
