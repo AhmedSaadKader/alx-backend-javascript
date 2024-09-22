@@ -1,5 +1,5 @@
-const { expect } = require('chai');
-const calculateNumber = require('./1-calcul');
+import { expect } from 'chai';
+import calculateNumber from './1-calcul';
 
 describe('it performs calculations on the rounded numbers', () => {
   describe('returns the sum if type is sum', () => {
