@@ -18,9 +18,12 @@ describe('it performs calculations on the rounded numbers', () => {
       assert.equal(calculateNumber('SUBTRACT', 3, 1), 2);
     });
   });
-  describe('returns division if type is subtract', () => {
+  describe('returns division if type is DIVIDE', () => {
     it('should return 3', () => {
       assert.equal(calculateNumber('DIVIDE', 3.1, 1), 3);
+    });
+    it('should return Error', () => {
+      assert.equal(calculateNumber('DIVIDE', 3.1, 0), 'Error');
     });
   });
   describe('returns NAN if type is incorrect', () => {
